@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "engineersbro",
-  "homepage": "https://engineersbro.github.io/portfolio",
+  "homepage": "https://engineersbro.github.io/kartikportfolio",
   "version": "0.1.0",
   "scripts": {
     "build": "react-scripts build",
