@@ -3,7 +3,7 @@ import fs from 'fs';
 
 const openSource = {
   githubConvertedToken: "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",
-  githubUserName: "engineersbro",
+  githubUserName: "ranakartikchauhan",
 };
 
 const query_pr = {
