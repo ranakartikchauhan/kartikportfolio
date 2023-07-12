@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 import fs from 'fs';
 
 const openSource = {
-  githubConvertedToken: "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",
+  githubConvertedToken: "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",
   githubUserName: "ranakartikchauhan",
 };
 
@@ -123,6 +123,69 @@ const query_pinned_projects = {
 	`,
 };
 
+const query_repos = {
+  query: `
+    query {
+      user(login: "${openSource.githubUserName}") {
+        repositories(first: 100) {
+          totalCount
+          nodes {
+            name
+            url
+            description
+            createdAt
+            primaryLanguage {
+              name
+            }
+            stargazerCount
+            forkCount
+            updatedAt
+          }
+        }
+      }
+    }
+  `,
+};
+
+const query_activity = {
+  query: `
+    query {
+      user(login: "${openSource.githubUserName}") {
+        contributionsCollection {
+          contributionCalendar {
+            totalContributions
+            weeks {
+              contributionDays {
+                date
+                contributionCount
+              }
+            }
+          }
+          commitContributionsByRepository(maxRepositories: 10) {
+            repository {
+              name
+              url
+              description
+              stargazerCount
+              forkCount
+              primaryLanguage {
+                name
+              }
+              pushedAt
+            }
+            contributions(first: 5) {
+              nodes {
+                occurredAt
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+};
+
+
 const baseUrl = "https://api.github.com/graphql";
 
 const headers = {
@@ -138,6 +201,7 @@ fetch(baseUrl, {
   .then((response) => response.text())
   .then((txt) => {
     const data = JSON.parse(txt);
+
     var cropped = { data: [] };
     cropped["data"] = data["data"]["user"]["pullRequests"]["nodes"];
 
@@ -175,7 +239,7 @@ fetch(baseUrl, {
 })
   .then((response) => response.text())
   .then((txt) => {
-    const data = JSON.parse(txt);
+
     var cropped = { data: [] };
     cropped["data"] = data["data"]["user"]["issues"]["nodes"];
 
@@ -213,9 +277,10 @@ fetch(baseUrl, {
     const data = JSON.parse(txt);
     const orgs = data["data"]["user"]["repositoriesContributedTo"]["nodes"];
     var newOrgs = { data: [] };
+
     for (var i = 0; i < orgs.length; i++) {
       var obj = orgs[i]["owner"];
-      if (obj["__typename"] === "Organization") {
+      if (obj["__typename"] === "Organizaion" || obj["__typename"] === "User") {
         var flag = 0;
         for (var j = 0; j < newOrgs["data"].length; j++) {
           if (JSON.stringify(obj) === JSON.stringify(newOrgs["data"][j])) {
@@ -265,7 +330,8 @@ fetch(baseUrl, {
   .then((response) => response.text())
   .then((txt) => {
     const data = JSON.parse(txt);
-    // console.log(txt);
+    console.log("___________")
+    console.log(data['data']);
     const projects = data["data"]["user"]["pinnedItems"]["nodes"];
     var newProjects = { data: [] };
     for (var i = 0; i < projects.length; i++) {
@@ -301,3 +367,54 @@ fetch(baseUrl, {
   .catch((error) =>
     console.log("Error occured in pinned projects 2", JSON.stringify(error))
   );
+
+
+fetch(baseUrl, {
+  method: 'POST',
+  headers: headers,
+  body: JSON.stringify(query_repos),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    const repositories = data.data.user.repositories.nodes;
+    // Write repositories data to a JSON file
+    fs.writeFile(
+      './src/shared/opensource/repositories.json',
+      JSON.stringify(repositories),
+      function (err) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log('Repositories data has been written to repositories.json');
+        }
+      }
+    );
+  })
+  .catch((error) => console.log('Error:', error));
+
+
+fetch(baseUrl, {
+  method: 'POST',
+  headers: headers,
+  body: JSON.stringify(query_activity),
+})
+  .then((response) => response.json())
+  .then((data) => {
+
+    const activity = data.data.user.contributionsCollection;
+    console.log('Activity:\n');
+
+    // // Write activity data to a JSON file
+    fs.writeFile(
+      './src/shared/opensource/activity.json',
+      JSON.stringify(activity),
+      function (err) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log('Activity data has been written to activity.json');
+        }
+      }
+    );
+  })
+  .catch((error) => console.log('Error:', error));
