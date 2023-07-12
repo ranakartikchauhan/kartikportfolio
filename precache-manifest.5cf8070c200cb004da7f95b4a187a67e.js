@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fb154e5aac0b35ae0b62b6a93991f4b3",
+    "revision": "2598d13252f7421f46a63a5254ab60f7",
     "url": "/kartikportfolio/index.html"
   },
   {
-    "revision": "0da47676259c0b8c9e50",
-    "url": "/kartikportfolio/static/css/main.5bed55f1.chunk.css"
+    "revision": "4ffa5e98f1444cfed9da",
+    "url": "/kartikportfolio/static/css/main.650f7291.chunk.css"
   },
   {
-    "revision": "ac26ffa1eaab618badb3",
-    "url": "/kartikportfolio/static/js/2.a6f8ac37.chunk.js"
+    "revision": "104ad452371b467d0bc8",
+    "url": "/kartikportfolio/static/js/2.dab8e11e.chunk.js"
   },
   {
-    "revision": "0da47676259c0b8c9e50",
-    "url": "/kartikportfolio/static/js/main.4f354c12.chunk.js"
+    "revision": "4ffa5e98f1444cfed9da",
+    "url": "/kartikportfolio/static/js/main.1de87619.chunk.js"
   },
   {
     "revision": "e7286e1124165b64ed57",
@@ -54,10 +54,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "16559172ca1d4d552390b48f19e102ba",
     "url": "/kartikportfolio/static/media/address_image.16559172.svg"
-  },
-  {
-    "revision": "be4f4800caf3d342509c1af959ff434d",
-    "url": "/kartikportfolio/static/media/animated_ashutosh.be4f4800.png"
   },
   {
     "revision": "dcd6dee2bd7458a4a576dc131506fd83",

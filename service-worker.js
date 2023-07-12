@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kartikportfolio/precache-manifest.c5fd053dbfd0e17914739e3904c500c9.js"
+  "/kartikportfolio/precache-manifest.5cf8070c200cb004da7f95b4a187a67e.js"
 );
 
 self.addEventListener('message', (event) => {

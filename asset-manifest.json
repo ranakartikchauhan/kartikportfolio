@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.css": "/kartikportfolio/static/css/main.5bed55f1.chunk.css",
-    "main.js": "/kartikportfolio/static/js/main.4f354c12.chunk.js",
-    "main.js.map": "/kartikportfolio/static/js/main.4f354c12.chunk.js.map",
+    "main.css": "/kartikportfolio/static/css/main.650f7291.chunk.css",
+    "main.js": "/kartikportfolio/static/js/main.1de87619.chunk.js",
+    "main.js.map": "/kartikportfolio/static/js/main.1de87619.chunk.js.map",
     "runtime-main.js": "/kartikportfolio/static/js/runtime-main.dc57392e.js",
     "runtime-main.js.map": "/kartikportfolio/static/js/runtime-main.dc57392e.js.map",
-    "static/js/2.a6f8ac37.chunk.js": "/kartikportfolio/static/js/2.a6f8ac37.chunk.js",
-    "static/js/2.a6f8ac37.chunk.js.map": "/kartikportfolio/static/js/2.a6f8ac37.chunk.js.map",
+    "static/js/2.dab8e11e.chunk.js": "/kartikportfolio/static/js/2.dab8e11e.chunk.js",
+    "static/js/2.dab8e11e.chunk.js.map": "/kartikportfolio/static/js/2.dab8e11e.chunk.js.map",
     "index.html": "/kartikportfolio/index.html",
-    "precache-manifest.c5fd053dbfd0e17914739e3904c500c9.js": "/kartikportfolio/precache-manifest.c5fd053dbfd0e17914739e3904c500c9.js",
+    "precache-manifest.5cf8070c200cb004da7f95b4a187a67e.js": "/kartikportfolio/precache-manifest.5cf8070c200cb004da7f95b4a187a67e.js",
     "service-worker.js": "/kartikportfolio/service-worker.js",
-    "static/css/main.5bed55f1.chunk.css.map": "/kartikportfolio/static/css/main.5bed55f1.chunk.css.map",
+    "static/css/main.650f7291.chunk.css.map": "/kartikportfolio/static/css/main.650f7291.chunk.css.map",
     "static/media/index.css": "/kartikportfolio/static/media/Montserrat-Regular.ee653992.ttf",
     "static/media/address_image.svg": "/kartikportfolio/static/media/address_image.16559172.svg",
-    "static/media/animated_ashutosh.png": "/kartikportfolio/static/media/animated_ashutosh.be4f4800.png",
     "static/media/animated_logo.svg": "/kartikportfolio/static/media/animated_logo.dcd6dee2.svg",
     "static/media/blogs_image.svg": "/kartikportfolio/static/media/blogs_image.058eca4c.svg",
     "static/media/cloud_infrastructure.svg": "/kartikportfolio/static/media/cloud_infrastructure.cacbc42b.svg",
@@ -57,8 +56,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.dc57392e.js",
-    "static/js/2.a6f8ac37.chunk.js",
-    "static/css/main.5bed55f1.chunk.css",
-    "static/js/main.4f354c12.chunk.js"
+    "static/js/2.dab8e11e.chunk.js",
+    "static/css/main.650f7291.chunk.css",
+    "static/js/main.1de87619.chunk.js"
   ]
 }
