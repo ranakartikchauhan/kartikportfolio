@@ -1,3 +1,9 @@
 {
-  "data": []
+  "data": [
+    {
+      "login": "01Akshayjangra",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/88896373?v=4",
+      "__typename": "User"
+    }
+  ]
 }

@@ -7,12 +7,15 @@ import PullRequests from "../../containers/pullRequests/PullRequests";
 import Issues from "../../containers/issues/Issues";
 import TopButton from "../../components/topButton/TopButton";
 import "./Opensource.css";
+import Activity from "../../components/activityList/activityList";
+import jsonData from "../../shared/opensource/activity.json";
 
 class Opensource extends Component {
   render() {
     return (
       <div className="opensource-main">
         <Header theme={this.props.theme} />
+        <Activity data={jsonData} />
         <Organizations theme={this.props.theme} />
         <OpensourceCharts theme={this.props.theme} />
         <PullRequests theme={this.props.theme} />
