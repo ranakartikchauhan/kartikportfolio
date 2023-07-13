@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2598d13252f7421f46a63a5254ab60f7",
+    "revision": "a9a3daec2c07b8c62f6c5a28f40cc675",
     "url": "/kartikportfolio/index.html"
   },
   {
-    "revision": "4ffa5e98f1444cfed9da",
+    "revision": "7521afd9227c9a9cf694",
     "url": "/kartikportfolio/static/css/main.650f7291.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kartikportfolio/static/js/2.dab8e11e.chunk.js"
   },
   {
-    "revision": "4ffa5e98f1444cfed9da",
-    "url": "/kartikportfolio/static/js/main.1de87619.chunk.js"
+    "revision": "7521afd9227c9a9cf694",
+    "url": "/kartikportfolio/static/js/main.07d146d8.chunk.js"
   },
   {
     "revision": "e7286e1124165b64ed57",
